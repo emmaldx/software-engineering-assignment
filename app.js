@@ -8,7 +8,9 @@ const redis = require("redis");
 const session = require("express-session");
 const RedisStore = require("connect-redis").default;
 
-let redisClient = redis.createClient();
+let redisClient = redis.createClient({
+  url: process.env.REDIS_URL || "redis://localhost:6379",
+});
 redisClient.connect().catch(console.error);
 
 // Initialize store.
