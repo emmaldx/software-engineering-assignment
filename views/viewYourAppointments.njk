@@ -1,0 +1,23 @@
+<title> View your appointments </title>
+      <body>
+         <h1 class= "heading">Your Appointments</h1>
+
+<table>
+  <tr>
+    <th>Appointment Reason</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Edit</th>
+  </tr>
+
+{% for item in data %}
+<tr>
+  <td>{{item.appointmentReason }}</td>
+  <td>{{item.date }}</td>
+  <td>{{item.time }}</td>
+  <td><a href={{"appointment/"+ item.id + "/edit"}} >Edit </a></td>
+</tr>
+{% endfor %}
+</table>
+
+                 <a href="/dashboard"><button type="submit" class="btn">Back to Dashboard</button></a>

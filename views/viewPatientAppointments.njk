@@ -1,0 +1,28 @@
+<title> View patient appointments </title>
+      <body>
+         <h1 class= "heading">Patient Appointments</h1>
+         
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Appointment Reason</th> 
+    <th>Date</th>
+    <th>Time</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+
+{% for item in data %}
+<tr>
+ <td>{{item.firstName}} {{item.lastName}}</td>  
+ <td>{{item.appointmentReason }}</td>
+ <td>{{item.date }}</td>
+ <td>{{item.time }}</td>
+ <td><a href={{"appointment/"+ item.id + "/edit"}} >Edit </a></td>
+  <td><a href={{"appointment/"+ item.id + "/delete"}} >Delete </a></td>
+</tr>
+{% endfor %}
+</table>
+
+         <a href="/dashboard"><button type="submit" class="btn">Back to Dashboard</button></a>
