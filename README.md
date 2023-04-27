@@ -7,7 +7,7 @@ There are two types of users, regular and admin. A regular user can register for
 An admin user can register, login, view patient appointments, edit an appointment and delete patient appointments.
 
 To Login as an admin user and see the admin dashboard:
-email address - admin1@gmail.com
+email address - admin.1@gmail.com
 password - 12345
 
 The application comprises of 11 pages in total, as listed below. Different pages are accessible to different user types.
