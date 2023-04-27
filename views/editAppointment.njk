@@ -1,0 +1,22 @@
+<title> Edit an appointment </title>
+      <body>
+         <h1 class= "heading">Edit an appointment</h1>
+
+         <form action="{{'/appointment/'+data.id+'/edit'}}" class = "form" method = "post">
+
+<input type ="date" name="date"
+  placeholder = "Date" value = "{{data.date}}" ></input>
+
+  <input type ="time" name="time"
+  placeholder = "Time" value = "{{data.time}}" >
+
+  <input type ="text" name="appointmentReason" maxlength = "30" 
+  placeholder = "Reason For Appointment" value = "{{data.appointmentReason}}" >
+
+<textarea id="additionalInformation" name="additionalInformation"
+          rows="5" cols="33">{{data.additionalInformation}}
+</textarea>
+
+<button type="submit" class="btn">Submit</button>
+
+</form>

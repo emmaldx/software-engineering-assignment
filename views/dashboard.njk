@@ -1,0 +1,15 @@
+<title> Welcome to the dashboard </title>
+      <body>
+            <h1 class="heading">Welcome to the dashboard</h1>
+         <h2 class= "heading">Manage your appointments using the buttons below</h2>
+
+<a href="/bookAppointment">Book an Appointment</a>
+<a href="/viewYourAppointments"> View Your Appointments</a>
+
+
+{% if roleId === "ADMIN" %} <a href="/deleteAppointment">Delete Appointment</a>
+<a href="/viewPatientAppointments">View Patient Appointments</a>
+{% endif %}
+
+
+
