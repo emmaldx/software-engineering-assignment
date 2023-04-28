@@ -5,9 +5,7 @@ const { deleteAppointment } = require("../db/bookings");
 
 // GET users
 router.get("/:appointmentId/delete", async function (req, res, next) {
-  console.log(req.params.appointmentId);
   const result = await fetchAppointmentAdmin(req.params.appointmentId);
-  console.log(result);
   res.render("deleteAppointment.njk", { data: result });
 });
 

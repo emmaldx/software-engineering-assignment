@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build": "node ./db/migrations.js",
     "start": "node ./bin/www",
     "start:dev": "nodemon -e .njk,js ./bin/www"
   },

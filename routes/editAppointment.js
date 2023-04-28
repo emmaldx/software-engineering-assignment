@@ -17,16 +17,13 @@ router.get("/:appointmentId/edit", async function (req, res, next) {
       req.params.appointmentId
     );
   } else {
-    console.log("hello");
     result = await editAppointmentAdmin(req.params.appointmentId);
   }
-  console.log(result);
   res.render("editAppointment.njk", { data: result });
 });
 
 router.get("/:appointmentId/delete", async function (req, res, next) {
   const result = await fetchAppointmentAdmin(req.params.appointmentId);
-  console.log(result, "<<<<<<<<<<<<<");
   res.render("deleteAppointment.njk", { data: result });
 });
 
@@ -49,7 +46,6 @@ router.post("/:appointmentId/edit", async function (req, res, next) {
 });
 
 router.post("/:appointmentId/delete", async function (req, res, next) {
-  console.log(req.body);
   // If user clicks no, return to view patient appointments
   if (req.body.delete === "No") {
     return res.redirect("/viewPatientAppointments");

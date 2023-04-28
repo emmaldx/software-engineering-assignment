@@ -9,11 +9,9 @@ router.get("/", function (req, res, next) {
 
 // To check email and password are valid
 router.post("/", async function (req, res, next) {
-  console.log(req.body);
   const result = await fetchUser(req.body.Email, req.body.Passsword);
 
   // If data not entered correctly or at all in the fields, send an error message
-  console.log(result);
   if (!result) {
     return res.send("Access denied, email or password cannot be found");
   }

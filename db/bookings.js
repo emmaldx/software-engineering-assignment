@@ -41,7 +41,6 @@ const deleteAppointment = async (bookingId) => {
         if (error) {
           reject(error);
         }
-        console.log(data);
         resolve(data);
       }
     );
@@ -50,7 +49,6 @@ const deleteAppointment = async (bookingId) => {
 
 // creating a function for 'Fetch Admin Appointment'.
 const fetchAppointmentAdmin = async (id) => {
-  console.log(id);
   return new Promise((resolve, reject) => {
     return db.get(`SELECT * FROM bookings WHERE id = ?`, id, (error, data) => {
       if (error) {
@@ -114,13 +112,11 @@ const editAppointment = async (userId, id) => {
 
 // creating a function for 'Edit Admin Appointment'.
 const editAppointmentAdmin = async (id) => {
-  console.log(id);
   return new Promise((resolve, reject) => {
     return db.get(`SELECT * FROM bookings WHERE id = ?`, id, (error, data) => {
       if (error) {
         reject(error);
       }
-      console.log(data);
       resolve(data);
     });
   });

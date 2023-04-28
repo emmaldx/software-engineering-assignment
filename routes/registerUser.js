@@ -10,7 +10,6 @@ router.get("/", function (req, res, next) {
 // To save a user in the database
 router.post("/", async function (req, res, next) {
   try {
-    console.log(req.body);
     // If data not entered in all fields, send an error message
     if (
       !req.body.firstName ||
@@ -27,14 +26,12 @@ router.post("/", async function (req, res, next) {
       req.body.Passsword
     );
     // If data not entered in all fields, send an error message
-    console.log(result);
     if (!result) {
       return res.send("Error occured, unable to register user");
     }
     // Else redirect to Login Page
     res.redirect("/userLogin");
   } catch (error) {
-    console.log(error);
     res.send("Error occured");
   }
 });
