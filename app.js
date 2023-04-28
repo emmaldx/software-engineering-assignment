@@ -23,6 +23,15 @@ var indexRouter = require("./routes/index");
 
 var app = express();
 
+app.use((req, res, next) => {
+  res.set(
+    "Cache-Control",
+    "no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0"
+  );
+
+  next();
+});
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 nunjucks.configure("views", { autoescape: true, express: app });
