@@ -3,7 +3,7 @@ SUMMARY
 How to setup the app:
 
 - node 18 or greater is required.
-- once you have node 18 or greater set up, run npm install, npm run build, then npm start to get running locally.
+- once you have node 18 or greater set up, run npm install, then npm start to get running locally.
 - Default to port 3000.
 - Redis is required to run the app locally - see here on how to install. https://redis.io/docs/getting-started/installation/
 
